@@ -21,9 +21,5 @@ coverage/
 
 # Script outputs
 dist-scripts/
-
-# Local-only Product Coverage dataset snapshot (contains dealer/CSM account
-# data — never commit; the app reads PRODUCT_COVERAGE_SHEET_CSV_URL instead)
-data/product-coverage.csv
 .vercel
 .env*.local

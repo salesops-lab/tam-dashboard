@@ -20,6 +20,7 @@ import {
 import { BreakdownTable } from '@/components/BreakdownTableNew'
 import { CrossTabTable } from '@/components/CrossTabTable'
 import { DealerGroupTable } from '@/components/DealerGroupTable'
+import { ProductCoverageSection } from '@/components/ProductCoverageSection'
 import { PodView, type PodStat, type Market } from '@/components/PodView'
 import { PODS, OWNER_TO_POD } from '@/lib/pods'
 import { DrilldownModal } from '@/components/DrilldownModal'
@@ -67,6 +68,7 @@ const sections = [
   { id: 'systems', label: 'Systems & Vendors', icon: Database },
   { id: 'ownership', label: 'GTM Ownership', icon: Users2 },
   { id: 'quality', label: 'Data Quality', icon: ShieldAlert },
+  { id: 'product-coverage', label: 'Product Coverage', icon: Boxes },
 ]
 
 const hubspotReportLinks = {
@@ -1814,6 +1816,8 @@ function DashboardContent() {
             <BreakdownTable title="Missing Field Audit" rows={derived.missingRows} maxRows={12} />
           </div>
         </section>
+
+        <ProductCoverageSection />
         </main>
       </div>
       {drilldown && (
